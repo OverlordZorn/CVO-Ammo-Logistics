@@ -1,0 +1,9 @@
+**/.hemttout/
+**/.vscode/
+**/keys/
+**/releases/
+**/include/
+*.pbo
+*.
+.hemttprivatekey
+.biprivatekey

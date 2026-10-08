@@ -1,0 +1,2 @@
+PREP(onReloaded);
+PREP(onMagazineUnloaded);
