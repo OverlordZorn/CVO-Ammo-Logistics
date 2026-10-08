@@ -6,7 +6,7 @@ class CfgPatches {
         author = "24th Chorni Voron";
         url = "https://github.com/SkippieDippie/24th-CVO-Ammo-Logistics";
 
-        requiredVersion = 1.00;
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"CBA_main"};
         
         units[] = {};
