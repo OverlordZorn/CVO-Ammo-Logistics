@@ -10,7 +10,7 @@ ADDON = false;
     CSTRING(timePerRound),
     "CVO Ammo Logistics",
     [0.5, 5, 1, 1, false],
-    2,
+    1,
     {},
     false
 ] call CBA_fnc_addSetting;
