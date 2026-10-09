@@ -1,2 +1,4 @@
-PREP(onReloaded);
+PREP(getPartialMagazines);
 PREP(onMagazineUnloaded);
+PREP(onReloaded);
+PREP(repackMagazine);

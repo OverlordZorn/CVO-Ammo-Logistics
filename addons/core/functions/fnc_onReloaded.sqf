@@ -1,5 +1,5 @@
 /*
- * Author: Skippie [24th CVO]
+ * Author: 24th Chorni Voron
  *
  * Handler for the "Reloaded" event. Handles magazines disappearing when empty
  * If the magazine that was just removed from the weapon is empty,

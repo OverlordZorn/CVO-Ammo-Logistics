@@ -1,5 +1,5 @@
 /*
- * Author: Skippie [24th CVO]
+ * Author: 24th Chorni Voron
  *
  * Handler for the "MagazineUnloaded" event. Handles magazines disappearing when empty.
  * If the magazine that was just removed from the weapon is empty,
@@ -9,7 +9,6 @@
 
 params ["_unit", "", "", "_magazine"];
 
-// No old magazine (e.g. weapon was unloaded before reload)
 if (_magazine isEqualTo []) exitWith {};
 
 _magazine params ["_magClass", "_ammoCount"];
@@ -18,16 +17,13 @@ _magazine params ["_magClass", "_ammoCount"];
 if (_ammoCount > 0) exitWith {};
 
 if (_unit canAdd _magClass) then {
-    // Room in uniform / vest / backpack
     _unit addMagazine [_magClass, 0];
 } else {
-    // Inventory full: drop the empty mag on the ground
     private _holder = nearestObjects [_unit, ["GroundWeaponHolder"], 2] param [0, objNull];
 
     if (isNull _holder) then {
         _holder = createVehicle ["GroundWeaponHolder", getPosATL _unit, [], 0, "CAN_COLLIDE"];
     };
 
-    // addMagazineAmmoCargo: [class, number of mags, rounds per mag]
     _holder addMagazineAmmoCargo [_magClass, 1, 0];
 };

@@ -7,7 +7,7 @@ class CfgPatches {
         url = "https://github.com/SkippieDippie/24th-CVO-Ammo-Logistics";
 
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"CBA_main"};
+        requiredAddons[] = {"cba_main", "ace_common"};
         
         units[] = {};
         weapons[] = {};

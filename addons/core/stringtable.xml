@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="CVO Ammo Logistics">
+    <Package name="Reload">
+        <Key ID="STR_cvo_ammo_logistics_core_notEnoughAmmo">
+            <English>Not enough ammo for a full repack. The magazine will be repacked partially.</English>
+            <Russian>Недостаточно патронов для полного снаряжения магазина. Магазин будет снаряжён частично.</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_timePerRound">
+            <English>Time per round</English>
+            <Russian>Время на патрон</Russian>
+        </Key>
+    </Package>
+</Project>
