@@ -4,6 +4,7 @@ class CfgPatches {
     class ADDON {
         name = "24th CVO Ammo Logistics";
         author = "24th Chorni Voron";
+        authors[] = {"Skippie [CVO]"};
         url = "https://github.com/SkippieDippie/24th-CVO-Ammo-Logistics";
 
         requiredVersion = REQUIRED_VERSION;
