@@ -18,4 +18,6 @@ _magazine params ["_magClass", "_ammoCount"];
 // Only handle empty magazines
 if (_ammoCount > 0) exitWith {};
 
+[_unit, _magClass] call FUNC(removeVanillaEmptyMagazine);
+
 [_unit, _magClass] call FUNC(returnEmptyMagazine);
