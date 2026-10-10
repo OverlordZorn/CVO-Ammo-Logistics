@@ -18,7 +18,7 @@
  */
 
 params [
-    ["_unit", objNull, [objNull]],
+    ["_unit", player, [objNull]],
     ["_magClass", "", [""]]
 ];
 

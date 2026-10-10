@@ -16,7 +16,7 @@
 
 params ["_target", "_player"];
 
-private _partial = [] call FUNC(getPartialMagazines);
+private _partial = [_player] call FUNC(getPartialMagazines);
 private _unique = [];
 {_unique pushBackUnique _x} forEach _partial;
 
@@ -40,7 +40,7 @@ private _actions = [];
         {
             params ["_target", "_player", "_params"];
             _params params ["_class", "_count"];
-            [_class, _count] call FUNC(repackMagazine);
+            [_class, _count, _player] call FUNC(repackMagazine);
         },
         {true},
         {},
