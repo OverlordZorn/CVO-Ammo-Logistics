@@ -24,35 +24,36 @@ params [
     ["_ammoCount", 0, [0]]
 ];
 
-private _ammoClass = "ACE_CableTie"; // placeholder for now
+private _ammoData = [_magClass] call FUNC(getAmmoData);
+private _ammoClass = _ammoData get "item";
 private _timePerRound = GVAR(timePerRound);
 
 private _maxCount = getNumber (configFile >> "CfgMagazines" >> _magClass >> "count");
 if (_maxCount <= 0) exitWith {
-    ["Invalid magazine class"] call CBA_fnc_notify;
+    [localize LSTRING(invalidMagazine)] call CBA_fnc_notify;
     false
 };
 
 private _roundsToLoad = _maxCount - _ammoCount;
 if (_roundsToLoad <= 0) exitWith {
-    ["Magazine is already full"] call CBA_fnc_notify;
+    [localize LSTRING(magazineFull)] call CBA_fnc_notify;
     false
 };
 
 private _hasMag = {
-    _x params ["_class", "_ammo", "_isLoaded"];
-    !_isLoaded && {_class == _magClass} && {_ammo == _ammoCount}
-} count magazinesAmmoFull player > 0;
+    _x params ["_class", "_ammo"];
+    _class == _magClass && {_ammo == _ammoCount}
+} count ([player] call FUNC(getInventoryMagazines)) > 0;
 
 if (!_hasMag) exitWith {
-    ["Magazine not found in inventory"] call CBA_fnc_notify;
+    [localize LSTRING(magazineNotFound)] call CBA_fnc_notify;
     false
 };
 
 private _ammoAvailable = {_x == _ammoClass} count items player;
 
 if (_ammoAvailable <= 0) exitWith {
-    ["No ammo available"] call CBA_fnc_notify;
+    [localize LSTRING(noAmmo)] call CBA_fnc_notify;
     false
 };
 
@@ -68,9 +69,8 @@ private _applyRepack = {
 
     if (_roundsLoaded <= 0) exitWith {};
 
-    private _mags = (magazinesAmmoFull player) select {
-        _x params ["_class", "", "_isLoaded"];
-        !_isLoaded && {_class == _magClass}
+    private _mags = ([player] call FUNC(getInventoryMagazines)) select {
+        (_x select 0) == _magClass
     } apply {_x select 1};
 
     private _index = _mags find _ammoCount;
@@ -115,20 +115,20 @@ private _totalTime = _roundsToLoad * _timePerRound;
 
         if (_roundsLoaded > 0) then {
             [_magClass, _ammoCount, _ammoClass, _roundsLoaded] call _applyRepack;
-            [format ["Repacking interrupted: %1 rounds loaded", _roundsLoaded]] call CBA_fnc_notify;
+            [format [localize LSTRING(repackInterrupted), _roundsLoaded]] call CBA_fnc_notify;
         } else {
-            ["Repacking cancelled"] call CBA_fnc_notify;
+            [localize LSTRING(repackCancelled)] call CBA_fnc_notify;
         };
     },
-    format ["Loading %1 rounds", _roundsToLoad],
+    format [localize LSTRING(loadingRounds), _roundsToLoad],
     {
         // Condition: abort if the magazine disappears or there are too few ammo items
         (_this select 0) params ["_magClass", "_ammoCount", "", "_ammoClass", "", "_roundsToLoad"];
 
         private _hasMag = {
-            _x params ["_class", "_ammo", "_isLoaded"];
-            !_isLoaded && {_class == _magClass} && {_ammo == _ammoCount}
-        } count magazinesAmmoFull player > 0;
+            _x params ["_class", "_ammo"];
+            _class == _magClass && {_ammo == _ammoCount}
+        } count ([player] call FUNC(getInventoryMagazines)) > 0;
 
         _hasMag && {({_x == _ammoClass} count items player) >= _roundsToLoad}
     },

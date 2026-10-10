@@ -1,3 +1,4 @@
+#include "\z\cvo_ammo_logistics\addons\core\script_component.hpp"
 /*
  * Author: 24th Chorni Voron
  * Returns all magazines in the player's inventory that are partially loaded.
@@ -19,16 +20,13 @@
 private _partialMags = [];
 
 {
-    _x params ["_magClass", "_ammoCount", "_isLoaded"];
+    _x params ["_magClass", "_ammoCount"];
 
-    // Skip magazines currently loaded in a weapon
-    if (!_isLoaded) then {
-        private _maxCount = getNumber (configFile >> "CfgMagazines" >> _magClass >> "count");
+    private _maxCount = getNumber (configFile >> "CfgMagazines" >> _magClass >> "count");
 
-        if (_maxCount > 0 && {_ammoCount < _maxCount}) then {
-            _partialMags pushBack [_magClass, _ammoCount, _maxCount];
-        };
+    if (_maxCount > 0 && {_ammoCount < _maxCount}) then {
+        _partialMags pushBack [_magClass, _ammoCount, _maxCount];
     };
-} forEach magazinesAmmoFull player;
+} forEach ([player] call FUNC(getInventoryMagazines));
 
 _partialMags

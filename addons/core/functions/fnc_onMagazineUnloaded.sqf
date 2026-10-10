@@ -1,10 +1,12 @@
+#include "\z\cvo_ammo_logistics\addons\core\script_component.hpp"
 /*
  * Author: 24th Chorni Voron
  *
- * Handler for the "MagazineUnloaded" event. Handles magazines disappearing when empty.
- * If the magazine that was just removed from the weapon is empty,
- * a new empty magazine of the same class is added to the unit's inventory.
- * If there is no room, it is placed on the ground next to the unit instead.
+ * Handler for the "MagazineUnloaded" event (manual or scripted unload).
+ * If the magazine removed from the weapon is empty, it is returned to the unit
+ * instead of disappearing.
+ *
+ * Public: No
  */
 
 params ["_unit", "", "", "_magazine"];
@@ -16,14 +18,4 @@ _magazine params ["_magClass", "_ammoCount"];
 // Only handle empty magazines
 if (_ammoCount > 0) exitWith {};
 
-if (_unit canAdd _magClass) then {
-    _unit addMagazine [_magClass, 0];
-} else {
-    private _holder = nearestObjects [_unit, ["GroundWeaponHolder"], 2] param [0, objNull];
-
-    if (isNull _holder) then {
-        _holder = createVehicle ["GroundWeaponHolder", getPosATL _unit, [], 0, "CAN_COLLIDE"];
-    };
-
-    _holder addMagazineAmmoCargo [_magClass, 1, 0];
-};
+[_unit, _magClass] call FUNC(returnEmptyMagazine);

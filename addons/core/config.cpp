@@ -8,7 +8,7 @@ class CfgPatches {
         url = "https://github.com/SkippieDippie/24th-CVO-Ammo-Logistics";
 
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main", "ace_common"};
+        requiredAddons[] = {"cvo_ammo_logistics_main", "cba_main", "ace_common", "ace_interact_menu", "ace_magazinerepack"};
         
         units[] = {};
         weapons[] = {};
@@ -17,4 +17,11 @@ class CfgPatches {
     };
 };
 
+class CVO_Ammo {
+    class CVO_Ammo_Default {
+        item = "ACE_CableTie"; //placeholder
+    };
+};
+
+#include "CfgVehicles.hpp"
 #include "CfgEventHandlers.hpp"
