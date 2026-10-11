@@ -26,17 +26,43 @@ if (!hasInterface) exitWith {};
 }] call CBA_fnc_execNextFrame;
 
 
-// Add custom action for repacking magazines
+private _icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa";
+
+// Parent: no children of its own, the two submenus are added below
 private _repackAction = [
     QGVAR(repackMagazines),
     localize LSTRING(repackMagazines),
-    "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa",
+    _icon,
     {},
-    {true},
-    FUNC(getRepackActions)
+    {true}
 ] call ace_interact_menu_fnc_createAction;
 
 ["CAManBase", 1, ["ACE_SelfActions"], _repackAction, true] call ace_interact_menu_fnc_addActionToClass;
+
+
+// Submenus: the children are built on demand by getRepackActions, the params select the mode
+private _refillAction = [
+    QGVAR(refill),
+    localize LSTRING(refill),
+    _icon,
+    {},
+    {true},
+    FUNC(getRepackActions),
+    [false]
+] call ace_interact_menu_fnc_createAction;
+
+private _unloadAction = [
+    QGVAR(unload),
+    localize LSTRING(unload),
+    "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\download_ca.paa",
+    {},
+    {true},
+    FUNC(getRepackActions),
+    [true]
+] call ace_interact_menu_fnc_createAction;
+
+["CAManBase", 1, ["ACE_SelfActions", QGVAR(repackMagazines)], _refillAction, true] call ace_interact_menu_fnc_addActionToClass;
+["CAManBase", 1, ["ACE_SelfActions", QGVAR(repackMagazines)], _unloadAction, true] call ace_interact_menu_fnc_addActionToClass;
 
 
 // Add event handlers and handle player unit being changed mid game (by respawning or using selectPlayer command)

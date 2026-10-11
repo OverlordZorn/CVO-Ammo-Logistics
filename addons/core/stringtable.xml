@@ -9,6 +9,10 @@
             <English>Loading %1 rounds</English>
             <Russian>Заряжается патронов: %1</Russian>
         </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_magazineEmpty">
+            <English>Magazine is already empty</English>
+            <Russian>Магазин уже пуст</Russian>
+        </Key>
         <Key ID="STR_cvo_ammo_logistics_core_magazineFull">
             <English>Magazine is already full</English>
             <Russian>Магазин уже полон</Russian>
@@ -25,6 +29,10 @@
             <English>Not enough ammo for a full repack. The magazine will be repacked partially.</English>
             <Russian>Недостаточно патронов для полного снаряжения магазина. Магазин будет снаряжён частично.</Russian>
         </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_refill">
+            <English>Refill</English>
+            <Russian>Снарядить</Russian>
+        </Key>
         <Key ID="STR_cvo_ammo_logistics_core_repackCancelled">
             <English>Repacking cancelled</English>
             <Russian>Снаряжение отменено</Russian>
@@ -40,6 +48,22 @@
         <Key ID="STR_cvo_ammo_logistics_core_timePerRound">
             <English>Time per round</English>
             <Russian>Время на патрон</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_unload">
+            <English>Unload</English>
+            <Russian>Разрядить</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_unloadCancelled">
+            <English>Unloading cancelled</English>
+            <Russian>Разряжание отменено</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_unloadInterrupted">
+            <English>Unloading interrupted: %1 rounds unloaded</English>
+            <Russian>Разряжание прервано: извлечено патронов: %1</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_unloadingRounds">
+            <English>Unloading %1 rounds</English>
+            <Russian>Извлекается патронов: %1</Russian>
         </Key>
     </Package>
 </Project>
