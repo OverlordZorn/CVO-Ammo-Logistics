@@ -32,12 +32,13 @@ params [
 
 if (isNull _unit) exitWith {false};
 
-private _ammoData = [_magClass] call FUNC(getAmmoData);
-private _ammoClass = _ammoData get "item";
 private _timePerRound = GVAR(timePerRound);
+private _magData = [_magClass] call FUNC(getMagazineData);
 
-private _maxCount = getNumber (configFile >> "CfgMagazines" >> _magClass >> "count");
-if (_maxCount <= 0) exitWith {
+private _maxCount = _magData get "count";
+private _ammoClass = _magData get "ammoItem";
+
+if (_maxCount <= 0 || {!(_magData get "isRepackable")}) exitWith {
     [localize LSTRING(invalidMagazine)] call CBA_fnc_notify;
     false
 };

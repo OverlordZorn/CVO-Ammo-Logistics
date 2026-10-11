@@ -21,12 +21,13 @@ params ["_target", "_player", ["_params", []]];
 _params params [["_unload", false, [false]]];
 
 private _mags = if (_unload) then {
-    // Every magazine that still holds rounds, full ones included
+    // Every repackable magazine that still holds rounds, full ones included
     ([_player] call FUNC(getInventoryMagazines)) select {
-        (_x select 1) > 0
+        _x params ["_class", "_count"];
+        _count > 0 && {(([_class] call FUNC(getMagazineData)) get "isRepackable")}
     } apply {
         _x params ["_class", "_count"];
-        [_class, _count, getNumber (configFile >> "CfgMagazines" >> _class >> "count")]
+           [_class, _count, ([_class] call FUNC(getMagazineData)) get "count"];
     }
 } else {
     [_player] call FUNC(getPartialMagazines)
@@ -42,7 +43,7 @@ private _actions = [];
     _entry params ["_class", "_count", "_max"];
 
     private _amount = {_x isEqualTo _entry} count _mags;
-    private _name = getText (configFile >> "CfgMagazines" >> _class >> "displayName");
+    private _name = (([_class] call FUNC(getMagazineData)) get "displayName");
     private _text = format ["%1 (%2/%3)", _name, _count, _max];
     if (_amount > 1) then {
         _text = format ["%1 x%2", _text, _amount];
@@ -72,7 +73,7 @@ private _actions = [];
             // Unloading needs no ammo items, only refilling does
             if (_unload) exitWith {};
 
-            private _item = ([_class] call FUNC(getAmmoData)) get "item";
+            private _item = (([_class] call FUNC(getMagazineData)) get "ammoItem");
             if !(_item in items _player) then {
                 _actionData set [2, [
                     "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa",

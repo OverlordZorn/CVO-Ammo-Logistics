@@ -21,6 +21,7 @@ class CVO_Ammo {
     class CVO_Ammo_Default {
         item = "ACE_CableTie"; //placeholder
         itemTracer = "";
+        itemQuickloader = "";
         convertMag[] = {};
     };
 };

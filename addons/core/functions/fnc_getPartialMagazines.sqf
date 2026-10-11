@@ -24,9 +24,9 @@ private _partialMags = [];
 {
     _x params ["_magClass", "_ammoCount"];
 
-    private _maxCount = getNumber (configFile >> "CfgMagazines" >> _magClass >> "count");
-
-    if (_maxCount > 0 && {_ammoCount < _maxCount}) then {
+    private _maxCount = (([_magClass] call FUNC(getMagazineData)) get "count");
+    
+    if (_maxCount > 0 && {_ammoCount < _maxCount} && {(([_magClass] call FUNC(getMagazineData)) get "isRepackable")}) then {
         _partialMags pushBack [_magClass, _ammoCount, _maxCount];
     };
 } forEach ([_unit] call FUNC(getInventoryMagazines));

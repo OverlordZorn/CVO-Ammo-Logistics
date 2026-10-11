@@ -1,5 +1,5 @@
-PREP(getAmmoData);
 PREP(getInventoryMagazines);
+PREP(getMagazineData);
 PREP(getPartialMagazines);
 PREP(getRepackActions);
 PREP(onMagazineUnloaded);
