@@ -5,7 +5,7 @@ class CfgPatches {
         name = "24th CVO Ammo Logistics";
         author = "24th Chorni Voron";
         authors[] = {"Skippie [CVO]"};
-        url = "https://github.com/SkippieDippie/24th-CVO-Ammo-Logistics";
+        url = "https://github.com/SkippieDippie/CVO-Ammo-Logistics";
 
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"cba_main"};
