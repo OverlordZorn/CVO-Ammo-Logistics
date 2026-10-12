@@ -17,6 +17,7 @@
  * "count"                 <NUMBER> - maximum ammo count of the magazine
  * "isRepackable"          <BOOL> - is magazine repackable
  * "picture"               <STRING> - magazine's picture
+ * "useBelt"               <BOOL> - does magazine use belts
  *
  * Example:
  * ["30Rnd_65x39_caseless_mag"] call cvo_ammo_logistics_core_fnc_getMagazineData
@@ -29,7 +30,8 @@ params [["_magClass", "", [""]]];
 if (_magClass == "") exitWith {
       createHashMapFromArray [
          ["ammoDataClass", ""], ["ammoItem", ""], ["ammoItemTracer", ""], ["ammoItemQuickLoader", ""],
-         ["convertMag", []], ["displayName", ""], ["count", 0], ["isRepackable", false], ["picture", ""]
+         ["convertMag", []], ["displayName", ""], ["count", 0], ["isRepackable", false], ["picture", ""],
+         ["useBelt", false]
       ]
 };
 
@@ -64,7 +66,8 @@ if (isNil "_magData") then {
       ["count", getNumber (configFile >> "CfgMagazines" >> _magClass >> "count")],
       ["displayName", getText (configFile >> "CfgMagazines" >> _magClass >> "displayName")],
       ["isRepackable", _isRepackable],
-      ["picture",getText (configFile >> "CfgMagazines" >> _magClass >> "picture")]
+      ["picture",getText (configFile >> "CfgMagazines" >> _magClass >> "picture")],
+      ["useBelt", ((getNumber (configFile >> "CfgMagazines" >> _magClass >> "useBelt")) == 1)]
    ];
 
    GVAR(magazineCache) set [_magClass, _magData];

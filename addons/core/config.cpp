@@ -25,6 +25,7 @@ class CVO_Magazines {
         itemTracer = "";
         itemQuickloader = "";
         convertMag[] = {};
+        useBelt = 0;
     };
 };
 
