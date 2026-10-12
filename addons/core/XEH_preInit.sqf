@@ -5,10 +5,10 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 [
-    QGVAR(timePerRound),        // setting variable: "cvo_ammo_logistics_core_timePerRound"
+    QGVAR(timePerRound),            // setting variable: "cvo_ammo_logistics_core_timePerRound"
     "SLIDER",
     CSTRING(timePerRound),
-    "CVO Ammo Logistics",
+    CSTRING(settingsCategory),
     [0.5, 5, 1, 1, false],
     1,
     {},

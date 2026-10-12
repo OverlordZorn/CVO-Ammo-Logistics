@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="CVO Ammo Logistics">
-    <Package name="Reload">
+    <Package name="Actions">
+        <Key ID="STR_cvo_ammo_logistics_core_refill">
+            <English>Refill</English>
+            <Russian>Снарядить</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_repackMagazines">
+            <English>Repack magazines</English>
+            <Russian>Снарядить магазины</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_unload">
+            <English>Unload</English>
+            <Russian>Разрядить</Russian>
+        </Key>
+    </Package>
+    <Package name="Hints">
         <Key ID="STR_cvo_ammo_logistics_core_invalidMagazine">
             <English>Invalid magazine class</English>
             <Russian>Недопустимый класс магазина</Russian>
@@ -29,30 +43,6 @@
             <English>Not enough ammo for a full repack. The magazine will be repacked partially.</English>
             <Russian>Недостаточно патронов для полного снаряжения магазина. Магазин будет снаряжён частично.</Russian>
         </Key>
-        <Key ID="STR_cvo_ammo_logistics_core_refill">
-            <English>Refill</English>
-            <Russian>Снарядить</Russian>
-        </Key>
-        <Key ID="STR_cvo_ammo_logistics_core_repackCancelled">
-            <English>Repacking cancelled</English>
-            <Russian>Снаряжение отменено</Russian>
-        </Key>
-        <Key ID="STR_cvo_ammo_logistics_core_repackInterrupted">
-            <English>Repacking interrupted: %1 rounds loaded</English>
-            <Russian>Снаряжение прервано: заряжено патронов: %1</Russian>
-        </Key>
-        <Key ID="STR_cvo_ammo_logistics_core_repackMagazines">
-            <English>Repack magazines</English>
-            <Russian>Снарядить магазины</Russian>
-        </Key>
-        <Key ID="STR_cvo_ammo_logistics_core_timePerRound">
-            <English>Time per round</English>
-            <Russian>Время на патрон</Russian>
-        </Key>
-        <Key ID="STR_cvo_ammo_logistics_core_unload">
-            <English>Unload</English>
-            <Russian>Разрядить</Russian>
-        </Key>
         <Key ID="STR_cvo_ammo_logistics_core_unloadCancelled">
             <English>Unloading cancelled</English>
             <Russian>Разряжание отменено</Russian>
@@ -64,6 +54,24 @@
         <Key ID="STR_cvo_ammo_logistics_core_unloadingRounds">
             <English>Unloading %1 rounds</English>
             <Russian>Извлекается патронов: %1</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_repackCancelled">
+            <English>Repacking cancelled</English>
+            <Russian>Снаряжение отменено</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_repackInterrupted">
+            <English>Repacking interrupted: %1 rounds loaded</English>
+            <Russian>Снаряжение прервано: заряжено патронов: %1</Russian>
+        </Key>
+    </Package>
+    <Package name="Settings">
+        <Key ID="STR_cvo_ammo_logistics_core_settingsCategory">
+            <English>CVO Ammo Logistics</English>
+            <Russian>CVO Ammo Logistics</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_timePerRound">
+            <English>Time per round</English>
+            <Russian>Время на патрон</Russian>
         </Key>
     </Package>
 </Project>
