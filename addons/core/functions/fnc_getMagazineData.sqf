@@ -14,8 +14,9 @@
  * "ammoItemTracer"        <STRING> - tracer ammo item classname
  * "ammoItemQuickLoader"   <STRING> - quickloader ammo item classname
  * "convertMag"            <ARRAY of STRING> - classnames the empty magazine can be converted into
- * "count"              <NUMBER> - maximum ammo count of the magazine
+ * "count"                 <NUMBER> - maximum ammo count of the magazine
  * "isRepackable"          <BOOL> - is magazine repackable
+ * "picture"               <STRING> - magazine's picture
  *
  * Example:
  * ["30Rnd_65x39_caseless_mag"] call cvo_ammo_logistics_core_fnc_getMagazineData
@@ -28,7 +29,7 @@ params [["_magClass", "", [""]]];
 if (_magClass == "") exitWith {
       createHashMapFromArray [
          ["ammoDataClass", ""], ["ammoItem", ""], ["ammoItemTracer", ""], ["ammoItemQuickLoader", ""],
-         ["convertMag", []], ["displayName", ""], ["count", 0], ["isRepackable", false]
+         ["convertMag", []], ["displayName", ""], ["count", 0], ["isRepackable", false], ["picture", ""]
       ]
 };
 
@@ -60,9 +61,10 @@ if (isNil "_magData") then {
       ["ammoItemTracer", getText (_ammoConfig >> "itemTracer")],
       ["ammoItemQuickLoader", getText (_ammoConfig >> "itemQuickLoader")],
       ["convertMag", getArray (_ammoConfig >> "convertMag")],
-      ["displayName", getText (configFile >> "CfgMagazines" >> _magClass >> "displayName")],
       ["count", getNumber (configFile >> "CfgMagazines" >> _magClass >> "count")],
-      ["isRepackable", _isRepackable]
+      ["displayName", getText (configFile >> "CfgMagazines" >> _magClass >> "displayName")],
+      ["isRepackable", _isRepackable],
+      ["picture",getText (configFile >> "CfgMagazines" >> _magClass >> "picture")]
    ];
 
    GVAR(magazineCache) set [_magClass, _magData];

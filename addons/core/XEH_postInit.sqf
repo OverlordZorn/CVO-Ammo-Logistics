@@ -26,13 +26,11 @@ if (!hasInterface) exitWith {};
 }] call CBA_fnc_execNextFrame;
 
 
-private _icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa";
 
-// Parent: no children of its own, the two submenus are added below
 private _repackAction = [
     QGVAR(repackMagazines),
     localize LSTRING(repackMagazines),
-    _icon,
+    QPATHTOF(data\cvo_icon_repack_ca.paa),
     {},
     {true}
 ] call ace_interact_menu_fnc_createAction;
@@ -44,7 +42,7 @@ private _repackAction = [
 private _refillAction = [
     QGVAR(refill),
     localize LSTRING(refill),
-    _icon,
+    QPATHTOF(data\cvo_icon_refill_ca.paa),
     {},
     {true},
     FUNC(getRepackActions),
@@ -54,7 +52,7 @@ private _refillAction = [
 private _unloadAction = [
     QGVAR(unload),
     localize LSTRING(unload),
-    "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\download_ca.paa",
+    QPATHTOF(data\cvo_icon_unload_ca.paa),
     {},
     {true},
     FUNC(getRepackActions),

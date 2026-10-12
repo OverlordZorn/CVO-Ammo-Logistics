@@ -44,12 +44,11 @@ private _actions = [];
 
     private _amount = {_x isEqualTo _entry} count _mags;
     private _name = (([_class] call FUNC(getMagazineData)) get "displayName");
+    private _icon = ([_class] call FUNC(getMagazineData)) get "picture";
     private _text = format ["%1 (%2/%3)", _name, _count, _max];
     if (_amount > 1) then {
         _text = format ["%1 x%2", _text, _amount];
     };
-
-    private _icon = ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa", "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\download_ca.paa"] select _unload;
 
     private _action = [
         format ["%1_%2_%3_%4", QGVAR(repack), _unload, _class, _count],
@@ -76,7 +75,7 @@ private _actions = [];
             private _item = (([_class] call FUNC(getMagazineData)) get "ammoItem");
             if !(_item in items _player) then {
                 _actionData set [2, [
-                    "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa",
+                    ([_class] call FUNC(getMagazineData)) get "picture",
                     "#808080"
                 ]];
             };
