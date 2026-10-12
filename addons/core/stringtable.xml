@@ -43,6 +43,14 @@
             <English>Not enough ammo for a full repack. The magazine will be repacked partially.</English>
             <Russian>Недостаточно патронов для полного снаряжения магазина. Магазин будет снаряжён частично.</Russian>
         </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_repackCancelled">
+            <English>Repacking cancelled</English>
+            <Russian>Снаряжение отменено</Russian>
+        </Key>
+        <Key ID="STR_cvo_ammo_logistics_core_repackInterrupted">
+            <English>Repacking interrupted: %1 rounds loaded</English>
+            <Russian>Снаряжение прервано: заряжено патронов: %1</Russian>
+        </Key>
         <Key ID="STR_cvo_ammo_logistics_core_unloadCancelled">
             <English>Unloading cancelled</English>
             <Russian>Разряжание отменено</Russian>
@@ -54,14 +62,6 @@
         <Key ID="STR_cvo_ammo_logistics_core_unloadingRounds">
             <English>Unloading %1 rounds</English>
             <Russian>Извлекается патронов: %1</Russian>
-        </Key>
-        <Key ID="STR_cvo_ammo_logistics_core_repackCancelled">
-            <English>Repacking cancelled</English>
-            <Russian>Снаряжение отменено</Russian>
-        </Key>
-        <Key ID="STR_cvo_ammo_logistics_core_repackInterrupted">
-            <English>Repacking interrupted: %1 rounds loaded</English>
-            <Russian>Снаряжение прервано: заряжено патронов: %1</Russian>
         </Key>
     </Package>
     <Package name="Settings">
