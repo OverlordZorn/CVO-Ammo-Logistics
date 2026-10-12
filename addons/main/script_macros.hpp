@@ -7,3 +7,6 @@
 #else
     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QUOTE(TRIPLES(ADDON,fnc,fncName))] call CBA_fnc_compileFunction
 #endif
+
+#define GVARMAG(var1) TRIPLES(PREFIX,magData,var1)
+#define QGVARMAG(var1) QUOTE(GVARMAG(var1))

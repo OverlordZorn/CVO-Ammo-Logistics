@@ -9,7 +9,7 @@
  * Return value:
  * Magazine data <HASHMAP>
  * Keys:
- * "ammoDataClass"         <STRING> - CVO_Ammo class that was resolved
+ * "ammoDataClass"         <STRING> - CVO_Magazines class that was resolved
  * "ammoItem"              <STRING> - ammo item classname
  * "ammoItemTracer"        <STRING> - tracer ammo item classname
  * "ammoItemQuickLoader"   <STRING> - quickloader ammo item classname
@@ -44,15 +44,15 @@ if (isNil "_magData") then {
 
    private _isRepackable  = _category == "Magazine" && {_type in ["Bullet", "ShotgunShell"]};
 
-   private _ref = getText (configFile >> "CfgMagazines" >> _magClass >> QGVARMAIN(ammoType));
+   private _ref = getText (configFile >> "CfgMagazines" >> _magClass >> QGVARMAIN(magazineData));
    private _ammoConfig = configNull;
 
    if (_ref != "") then {
-      _ammoConfig = configFile >> "CVO_Ammo" >> _ref;
+      _ammoConfig = configFile >> "CVO_Magazines" >> _ref;
    };
 
    if (!isClass _ammoConfig) then {
-      _ammoConfig = configFile >> "CVO_Ammo" >> "CVO_Ammo_Default";
+      _ammoConfig = configFile >> "CVO_Magazines" >> QGVARMAG(Default);
    };
 
    _magData = createHashMapFromArray [
