@@ -1,4 +1,5 @@
 #define COMPONENT core
+#define COMPONENT_BEAUTIFIED Core
 
 //#define DISABLE_COMPILE_CACHE
 

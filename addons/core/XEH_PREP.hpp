@@ -1,9 +1,0 @@
-PREP(getInventoryMagazines);
-PREP(getMagazineData);
-PREP(getPartialMagazines);
-PREP(getRepackActions);
-PREP(onMagazineUnloaded);
-PREP(onReloaded);
-PREP(removeVanillaEmptyMagazine);
-PREP(repackMagazine);
-PREP(returnEmptyMagazine);

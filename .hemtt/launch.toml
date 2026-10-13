@@ -1,20 +1,25 @@
-[default]
-workshop = [
-    "450814997", #CBA
-    "463939057", #ACE
-    "3499977893", #Advanced developers tools
+[base]
+workshop = []
+parameters = [
+    "-noPause",
+    "-noPauseAudio",
 ]
+
 presets = []
 dlc = []
 optionals = []
-parameters = [
-    "-skipIntro",
-    "-noSplash",
-    "-showScriptErrors",
-    "-debug",
-    "-filePatching",
-]
+
 executable = "arma3_x64"
 file_patching = true
 binarize = false
 rapify = true
+
+[default]
+extends = "base"
+
+workshop = [
+    "450814997", #CBA
+    "463939057", #ACE
+    "3499977893", #Advanced developers tools
+    "1779063631", #Zeus Enhanced
+]

@@ -1,4 +1,4 @@
-#include "\z\cvo_ammo_logistics\addons\core\script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 24th Chorni Voron
  * Returns the magazine data. The data is cached per magazine.

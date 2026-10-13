@@ -8,11 +8,17 @@ url = "https://github.com/SkippieDippie/CVO-Ammo-Logistics"
 
 [files]
 include = [
-    "mod.cpp",
-    "meta.cpp",
     "LICENSE",
     "logo_ca.paa",
-    "logo_co.paa"
+    "logo_co.paa",
+    "*.bikey"
 ]
 exclude  = [
+    "*.svg",
+    "*.md",
+    "/.vscode/*",
+    "/sources/*",
 ]
+
+[version]
+git_hash = 0
