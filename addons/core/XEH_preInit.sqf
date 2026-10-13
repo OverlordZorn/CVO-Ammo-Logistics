@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-#include "XEH_PREP.hpp"
-
 [
     QGVAR(timePerRound),            // setting variable: "cvo_ammo_logistics_core_timePerRound"
     "SLIDER",
