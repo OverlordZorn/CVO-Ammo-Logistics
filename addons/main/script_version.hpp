@@ -1,4 +1,15 @@
-#define MAJOR 1
+// # Will be written by Github Release Workflow, based upon Github release tag
+#define MAJOR 0
 #define MINOR 0
-#define PATCHLVL 0
+#define PATCH 0
 #define BUILD 1
+
+
+// #define VERSION MACROS
+#define VERSION MAJOR.MINOR
+#define VERSION_AR MAJOR,MINOR,PATCH,BUILD
+#define VERSION_STR MAJOR##.##MINOR##.##PATCH##.##BUILD
+
+#define REQUIRED_VERSION 2.20
+#define REQUIRED_CBA_VERSION {3,18,4}
+#define REQUIRED_ACE_VERSION {3,20,0}
