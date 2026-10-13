@@ -2,13 +2,13 @@
 
 class CfgPatches {
     class ADDON {
-        name = "24th CVO Ammo Logistics - Ammo";
-        author = "24th Chorni Voron";
+        name = ADDON_NAME;
+        author = ECSTRING(main,cvo);
         authors[] = {"Skippie [CVO]"};
-        url = "https://github.com/SkippieDippie/CVO-Ammo-Logistics";
+        url = ECSTRING(main,url);
 
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cvo_ammo_logistics_main", "cvo_ammo_logistics_core", "ace_common", "A3_Weapons_F"};
+        requiredAddons[] = {QGVARMAIN(core), "ace_common", "A3_Weapons_F"};
 
         units[] = {};
         weapons[] = {QGVAR(556x45), QGVAR(556x45_Tracer), QGVAR(65x39), QGVAR(65x39_Tracer)};

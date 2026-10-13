@@ -3,92 +3,92 @@
     <Package name="Actions">
         <Key ID="STR_cvo_ammo_logistics_core_refill">
             <English>Refill</English>
-            <German>Nachfüllen</German>
             <Russian>Снарядить</Russian>
+            <German>Nachfüllen</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_repackMagazines">
             <English>Repack magazines</English>
-            <German>Magazine umpacken</German>
             <Russian>Снарядить магазины</Russian>
+            <German>Magazine umpacken</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_unload">
             <English>Unload</English>
-            <German>Entladen</German>
             <Russian>Разрядить</Russian>
+            <German>Entladen</German>
         </Key>
     </Package>
     <Package name="Hints">
         <Key ID="STR_cvo_ammo_logistics_core_invalidMagazine">
             <English>Invalid magazine class</English>
-            <German>Ungültige Magazin-Klasse</German>
             <Russian>Недопустимый класс магазина</Russian>
+            <German>Ungültige Magazin-Klasse</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_loadingRounds">
             <English>Loading %1 rounds</English>
-            <German>%1 Patronen laden</German>
             <Russian>Заряжается патронов: %1</Russian>
+            <German>%1 Patronen laden</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_magazineEmpty">
             <English>Magazine is already empty</English>
-            <German>Magazin ist bereits leer</German>
             <Russian>Магазин уже пуст</Russian>
+            <German>Magazin ist bereits leer</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_magazineFull">
             <English>Magazine is already full</English>
-            <German>Magazin ist bereits voll</German>
             <Russian>Магазин уже полон</Russian>
+            <German>Magazin ist bereits voll</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_magazineNotFound">
             <English>Magazine not found in inventory</English>
-            <German>Magazin im Inventar nicht gefunden</German>
             <Russian>Магазин не найден в инвентаре</Russian>
+            <German>Magazin im Inventar nicht gefunden</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_noAmmo">
             <English>No ammo available</English>
-            <German>Keine Munition verfügbar</German>
             <Russian>Нет доступных патронов</Russian>
+            <German>Keine Munition verfügbar</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_notEnoughAmmo">
             <English>Not enough ammo for a full repack. The magazine will be repacked partially.</English>
-            <German>Nicht genug Munition für ein vollständiges Umpacken. Das Magazin wird teilweise umgepackt.</German>
             <Russian>Недостаточно патронов для полного снаряжения магазина. Магазин будет снаряжён частично.</Russian>
+            <German>Nicht genug Munition für ein vollständiges Umpacken. Das Magazin wird teilweise umgepackt.</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_repackCancelled">
             <English>Repacking cancelled</English>
-            <German>Umpacken abgebrochen</German>
             <Russian>Снаряжение отменено</Russian>
+            <German>Umpacken abgebrochen</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_repackInterrupted">
             <English>Repacking interrupted: %1 rounds loaded</English>
-            <German>Umpacken unterbrochen: %1 Patronen geladen</German>
             <Russian>Снаряжение прервано: заряжено патронов: %1</Russian>
+            <German>Umpacken unterbrochen: %1 Patronen geladen</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_unloadCancelled">
             <English>Unloading cancelled</English>
-            <German>Entladen abgebrochen</German>
             <Russian>Разряжание отменено</Russian>
+            <German>Entladen abgebrochen</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_unloadInterrupted">
             <English>Unloading interrupted: %1 rounds unloaded</English>
-            <German>Entladen unterbrochen: %1 Patronen entladen</German>
             <Russian>Разряжание прервано: извлечено патронов: %1</Russian>
+            <German>Entladen unterbrochen: %1 Patronen entladen</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_unloadingRounds">
             <English>Unloading %1 rounds</English>
-            <German>%1 Patronen entladen</German>
             <Russian>Извлекается патронов: %1</Russian>
+            <German>%1 Patronen entladen</German>
         </Key>
     </Package>
     <Package name="Settings">
         <Key ID="STR_cvo_ammo_logistics_core_settingsCategory">
             <English>CVO Ammo Logistics</English>
-            <German>CVO Ammo Logistics</German>
             <Russian>CVO Ammo Logistics</Russian>
+            <German>CVO Ammo Logistics</German>
         </Key>
         <Key ID="STR_cvo_ammo_logistics_core_timePerRound">
             <English>Time per round</English>
-            <German>Zeit pro Patrone</German>
             <Russian>Время на патрон</Russian>
+            <German>Zeit pro Patrone</German>
         </Key>
     </Package>
 </Project>
