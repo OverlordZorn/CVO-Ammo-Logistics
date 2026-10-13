@@ -19,8 +19,6 @@ class CfgPatches {
     };
 };
 
-
-
 class CVO_Magazines {
     class GVARMAG(Default) {
         item = "ACE_CableTie"; //placeholder
@@ -33,5 +31,3 @@ class CVO_Magazines {
 
 #include "CfgVehicles.hpp"
 #include "CfgEventHandlers.hpp"
-
-#include "CfgFunctions.hpp"
