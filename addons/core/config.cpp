@@ -21,6 +21,9 @@ class CfgPatches {
 };
 
 #include "CVO_Magazines.hpp"
+#include "CVO_Magazines.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
