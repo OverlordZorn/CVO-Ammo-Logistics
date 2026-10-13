@@ -9,6 +9,7 @@ class CfgPatches {
 
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"cba_main", "ace_common", "ace_interact_menu", "ace_magazinerepack"};
+        requiredAddons[] = {"cba_main", "ace_common", "ace_interact_menu", "ace_magazinerepack"};
         
         units[] = {};
         weapons[] = {};
@@ -20,6 +21,9 @@ class CfgPatches {
 };
 
 #include "CVO_Magazines.hpp"
+#include "CVO_Magazines.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"

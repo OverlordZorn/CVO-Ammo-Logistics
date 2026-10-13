@@ -3,6 +3,7 @@
 class CfgPatches {
     class ADDON {
         name = ADDON_NAME;
+
         author = CSTRING(cvo);
         authors[] = {"Skippie [CVO]"};
         url = CSTRING(url);
