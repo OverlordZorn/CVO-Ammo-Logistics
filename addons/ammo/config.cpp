@@ -2,20 +2,29 @@
 
 class CfgPatches {
     class ADDON {
-        name = "24th CVO Ammo Logistics - Ammo";
-        author = "24th Chorni Voron";
+		name = ADDON_NAME;
+		author = "$STR_mod_author";
         authors[] = {"Skippie [CVO]"};
-        url = "https://github.com/SkippieDippie/CVO-Ammo-Logistics";
-
-        requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cvo_ammo_logistics_main", "cvo_ammo_logistics_core", "ace_common", "A3_Weapons_F"};
-
-        units[] = {};
-        weapons[] = {QGVAR(556x45), QGVAR(556x45_Tracer), QGVAR(65x39), QGVAR(65x39_Tracer)};
-
-        skipWhenMissingDependencies = 0;
+        url = "$STR_mod_URL";
 
         VERSION_CONFIG;
+
+        // Addon Specific Information
+        // Minimum compatible version. When the game's version is lower, pop-up warning will appear when launching the game.
+        requiredVersion = REQUIRED_VERSION;
+
+        // Required addons, used for setting load order.
+        // When any of the addons is missing, pop-up warning will appear when launching the game.
+        requiredAddons[] = {QPVAR(main), PVAR(core), "ace_common", "A3_Weapons_F"};
+
+		// Optional. If this is 1, if any of requiredAddons[] entry is missing in your game the entire config will be ignored and return no error (but in rpt) so useful to make a compat Mod (Since Arma 3 2.14)
+		skipWhenMissingDependencies = 1;
+
+        // List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups)
+        units[] = {};
+
+        weapons[] = {QGVAR(556x45), QGVAR(556x45_Tracer), QGVAR(65x39), QGVAR(65x39_Tracer)};
+
     };
 };
 
