@@ -19,19 +19,9 @@ class CfgPatches {
     };
 };
 
-
-
-class CVO_Magazines {
-    class GVARMAG(Default) {
-        item = "ACE_CableTie"; //placeholder
-        itemTracer = "";
-        itemQuickloader = "";
-        convertMag[] = {};
-        useBelt = 0;
-    };
-};
+#include "CfgFunctions.hpp"
 
 #include "CfgVehicles.hpp"
 #include "CfgEventHandlers.hpp"
 
-#include "CfgFunctions.hpp"
+#include "CVO_Magazines.hpp"
