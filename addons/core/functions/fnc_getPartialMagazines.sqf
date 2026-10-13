@@ -1,4 +1,4 @@
-#include "\z\cvo_ammo_logistics\addons\core\script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 24th Chorni Voron
  * Returns all magazines in the unit's inventory that are not full, including empty ones.

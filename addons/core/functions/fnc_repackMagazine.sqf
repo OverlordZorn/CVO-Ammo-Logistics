@@ -1,4 +1,4 @@
-#include "\z\cvo_ammo_logistics\addons\core\script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 24th Chorni Voron
  * Refills a magazine with loose ammo items from the unit's inventory,
