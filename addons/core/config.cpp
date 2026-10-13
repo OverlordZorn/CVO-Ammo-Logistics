@@ -9,7 +9,6 @@ class CfgPatches {
 
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"cba_main", "ace_common", "ace_interact_menu", "ace_magazinerepack"};
-        requiredAddons[] = {"cba_main", "ace_common", "ace_interact_menu", "ace_magazinerepack"};
         
         units[] = {};
         weapons[] = {};
